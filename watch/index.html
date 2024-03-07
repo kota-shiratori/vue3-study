@@ -21,6 +21,13 @@
         <p>
             <input type="text" v-model="m">m
         </p>
+        <!-- deepオプション-監視プロパティ ネストされたオブジェクトも監視する -->
+        <ul>
+            <li v-for="color in colors">{{ color.name }}</li>
+        </ul>
+        <button v-on:click="onClick">
+            Click!
+        </button>
     </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="js/main.js"></script>
