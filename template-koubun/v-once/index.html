@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>テンプレート構文-v-onceディレクティブ</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div id="app">
+        <p v-once>{{ message }}</p>
+        <!-- 初回だけテンプレートを評価し、それ以降は静的なコンテンツとして扱う。 -->
+        <!-- 初回だけテキストバインディングを行う。 -->
+        <button v-on:click="clickHandler">Click</button>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

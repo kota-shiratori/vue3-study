@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>テンプレート構文-v-preディレクティブ</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div id="app">
+        <p v-pre>{{ message }}</p>
+        <!-- 要素とすべての子要素のコンパイルをスキップしたい。→v-preディレクティブを使用 -->
+        <!-- 生のmustacheタグを表示したい時、ディレクティブのない大量のノードをスキップすることで、コンパイルのスピードを上げる -->
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

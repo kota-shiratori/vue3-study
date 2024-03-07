@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>テンプレート構文-v-htmlディレクティブ</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div id="app">
+        <!-- プレーンなHTMLを挿入したい。→v-htmlディレクティブを使用 -->
+        <!-- 指定した要素のinnerHTMLを更新できる -->
+        <p>{{ message }}</p>
+        <p v-html="message"></p>
+        <!-- XSS脆弱性を引き起こす恐れがあるため、v-htmlディレクティブは慎重に使用する。 -->
+        <!-- v-htmlディレクティブで使用するデータやテンプレートは、信頼できるデータのみを使用する。 -->
+        <!-- サービスを利用するユーザーが入力したコンテンツには、絶対に使用しない。 -->
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
