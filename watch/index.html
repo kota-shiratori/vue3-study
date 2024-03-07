@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>監視プロパティ</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div id="app">
+        <!-- 特定のテータまたは、算出プロパティの状態を監視して、変化があったときに登録した処理を自動的に実行できるもの。 -->
+        <p>{{message}}</p>
+        <p>
+            <input type="text" v-model="message">
+        </p>
+        <p>
+            <input type="text" v-model="km">km
+        </p>
+        <p>
+            <input type="text" v-model="m">m
+        </p>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
