@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>算出プロパティ</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div id="app">
+        <!-- 算出プロパティcomputedとは
+    ・関数によって算出したデータを返すことができるプロパティ -->
+        <p>{{ message }}</p>
+        <p>{{ reversedMessage }}</p>
+        <p>{{ reversedMessageMethod() }}</p>
+        <!-- computed・・・プロパティ
+            ・()が不要
+            ・getter,setter
+            ・キャッシュあり
+            methods・・・メソッド
+            ・()が必須
+            ・getter
+            ・キャッシュなし
+        -->
+        <p>本体価格：<input type="text" v-model="basePrice"></p>
+        <p>税込価格：<input type="text" v-model="texIncludedPrice"></p>
+        <h2>computed</h2>
+        <ol>
+            <li>{{computedNumber}}</li>
+            <li>{{computedNumber}}</li>
+            <li>{{computedNumber}}</li>
+            <!-- ⇧全部同じ値 -->
+        </ol>
+        <h2>methods</h2>
+        <ol>
+            <li>{{methodsNumber()}}</li>
+            <li>{{methodsNumber()}}</li>
+            <li>{{methodsNumber()}}</li>
+            <!-- ⇧全部違う値 -->
+        </ol>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
