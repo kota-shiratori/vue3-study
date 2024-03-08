@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>フォーム入力バインディング</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div id="app">
+        <!-- ・フォームの入力および選択肢をデータと同期させる「双方向データバインディングを行うには」v-modelディレクティブを使用 -->
+        <!-- v-modelディレクティブ
+            1.データバインディングで、要素のvalue属性を更新する
+            2.イベントハンドリングで、受け取った値をデータに代入する
+        -->
+        <!-- v-model利用時は属性は無視される(valueなど) -->
+        <!-- 複数行テキスト
+        ・textarea要素では、mustache構文を使ったデータバインディングは使えない。
+        →textareaではv-modelディレクティブを利用
+        -->
+        <!-- チェックボックス
+        ・単体のチェックボックス...boolean値
+        ・複数のチェックボックス...配列 -->
+        <!-- v-modelは、修飾子により動作を変更できる。
+                ・.lazy...バインドのタイミングを遅延させる
+                ・.trim...入力値から前後の空白を削除してからデータに代入
+                ・.number...入力値を数値型に型変換してからデータに代入 
+        -->
+        <!-- <p>{{ message }}</p>
+        <input type="text" v-model="message" value="hogehoge">
+        <label for="checkbox">{{ checked }}</label>
+        <input type="checkbox" id="checkbox" v-model="checked">
+        <label for="red">Red</label> -->
+        <!-- <input type="checkbox" id="red" value="Red" v-model="colors">
+        <label for="blue">Blue</label>
+        <input type="checkbox" id="blue" value="Blue" v-model="colors">
+        <label for="green">Green</label>
+        <input type="checkbox" id="green" value="Green" v-model="colors">
+        <p>{{ colors }}</p> -->
+        <!-- <input type="radio" id="red" value="Red" v-model="color">
+        <label for="red">Red</label>
+        <input type="radio" id="green" value="Green" v-model="color">
+        <label for="green">Green</label>
+        <input type="radio" id="blue" value="Blue" v-model="color">
+        <label for="blue">Blue</label>
+        <p>{{color}}</p> -->
+        <select v-model="selected" multiple>
+            <option>Red</option>
+            <option>Green</option>
+            <option>Blue</option>
+        </select>
+        <p>{{ selected }}</p>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
