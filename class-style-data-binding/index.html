@@ -10,8 +10,13 @@
 
 <body>
     <div id="app">
-        <p>Hello <span v-bind:class="{ large: isLarge }">Vue.js!</span></p>
-        <p>Hello <span :class="{ large: isLarge }">Vue.js!</span></p>
+        <p>Hello <span class="bg-gray text-blue" v-bind:class="{ large: isLarge, 'text-danger': hasError }">Vue.js!</span></p>
+        <p>Hello <span v-bind:class="largeClass">Vue.js!</span></p>
+        <p>Hello <span v-bind:class="[largeClass,dangerClass]">Vue.js!</span></p>
+        <p>Hello <span v-bind:class="classObject">Vue.js!</span></p>
+        <p>Hello <span v-bind:class="isLarge ? largeClass : ''">Vue.js!</span></p>
+        <p>Hello <span v-bind:style="{ color: color, fontSize: fontSize + 'px' }">Vue.js!</span></p>
+        <p>Hello <span v-bind:style="styleObject">Vue.js!</span></p>
     </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="js/main.js"></script>
